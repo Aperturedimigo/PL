@@ -114,7 +114,7 @@ class Form(QWidget):
         data2 = bool(data)
         if data2:
             self.showPopUpSuccessWindow("confirm")
-            controlDoor.opendoor()
+            controlDoor.closedoor()
         else :
             self.showPopUpErrorWindow("confirm")
         #############
