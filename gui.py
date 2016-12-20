@@ -111,8 +111,7 @@ class Form(QWidget):
         utils.getSecondImage(data)
         utils.createMainImage(data2)
         data = utils.compare()
-        data2 = bool(data)
-        if data2:
+        if data:
             self.showPopUpSuccessWindow("confirm")
             controlDoor.closedoor()
         else :
