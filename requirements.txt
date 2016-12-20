@@ -1,0 +1,3 @@
+PyYAML == 3.12
+cognitive-face == 1.2.1
+requests == 9.0.1
