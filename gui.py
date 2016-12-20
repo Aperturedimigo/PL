@@ -95,7 +95,8 @@ class Form(QWidget):
     def register(self):
         # 해야할것 싸그리 작성, cancel 냅두셈! 할일 끝나면 초기화면으로 돌아갈거에요
         # if 오류면 밑에 showPopupErrorWindow 실행, 팝업 후 초기화면으로 되돌아갈거임
-        utils.createMainImage(open("1.jpg", "rb"))
+        data = open("1.jpg", "rb")
+        utils.createMainImage(data)
         #self.showPopUpErrorWindow("register")
         self.showPopUpSuccessWindow("register")
         #############
@@ -105,8 +106,10 @@ class Form(QWidget):
     def confirm(self):
         # 해야할 것 싸그리 작성, cancel 냅두셈! 할일 끝나면 초기화면으로 돌아갈거에요
         # if 오류면 밑에 showPopupErrorWindow 실행
-        utils.getSecondImage(open("2.jpg","rb"))
-        utils.createMainImage(open("1.jpg", "rb"))
+        data = open("2.jpg","rb")
+        data2 = open("1.jpg", "rb")
+        utils.getSecondImage(data)
+        utils.createMainImage(data2)
         data = utils.compare()
         if data:
             self.showPopUpSuccessWindow("confirm")
